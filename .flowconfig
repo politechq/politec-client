@@ -1,0 +1,22 @@
+[ignore]
+*.test
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+all=true
+module.name_mapper='^\([^\.].*\)$' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/src/types/SVGModule.js'
+
+[strict]
+unclear-type
+unsafe-getters-setters
+untyped-import
+untyped-type-import
+
+[untyped]
+.*/node_modules/*

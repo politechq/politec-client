@@ -1,0 +1,123 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:security/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "fp",
+    "ramda",
+    "react",
+    "react-hooks",
+    "security",
+    "sort-destructure-keys"
+  ],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "fp/no-arguments": "error",
+    "fp/no-class": "error",
+    "fp/no-delete": "error",
+    "fp/no-events": "error",
+    "fp/no-get-set": "error",
+    "fp/no-let": "error",
+    "fp/no-loops": "error",
+    "fp/no-mutating-assign": "error",
+    "fp/no-mutating-methods": ["error", {
+      "allowedObjects": ["history"]
+    }],
+    "fp/no-mutation": ["error", {
+      "exceptions": [{
+        "property": "propTypes"
+      }]
+    }],
+    "fp/no-nil": "off",
+    "fp/no-proxy": "error",
+    "fp/no-rest-parameters": "off",
+    "fp/no-this": "error",
+    "fp/no-throw": "error",
+    "fp/no-unused-expression": "off",
+    "fp/no-valueof-field": "error",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "no-console": "off",
+    "no-var": "error",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "prefer-destructuring": ["error", {
+      "array": true,
+      "object": true
+    }, {
+      "enforceForRenamedProperties": false
+    }],
+    "ramda/always-simplification": "error",
+    "ramda/any-pass-simplification": "error",
+    "ramda/both-simplification": "error",
+    "ramda/complement-simplification": "error",
+    "ramda/compose-pipe-style": "off",
+    "ramda/compose-simplification": "error",
+    "ramda/cond-simplification": "off",
+    "ramda/either-simplification": "error",
+    "ramda/eq-by-simplification": "error",
+    "ramda/filter-simplification": "error",
+    "ramda/if-else-simplification": "error",
+    "ramda/map-simplification": "error",
+    "ramda/merge-simplification": "error",
+    "ramda/no-redundant-and": "off",
+    "ramda/no-redundant-not": "off",
+    "ramda/no-redundant-or": "off",
+    "ramda/pipe-simplification": "error",
+    "ramda/prefer-both-either": "error",
+    "ramda/prefer-complement": "error",
+    "ramda/prefer-ramda-boolean": "error",
+    "ramda/prop-satisfies-simplification": "error",
+    "ramda/reduce-simplification": "error",
+    "ramda/reject-simplification": "error",
+    "ramda/set-simplification": "error",
+    "ramda/unless-simplification": "error",
+    "ramda/when-simplification": "error",
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-sort-props": ["error", {
+      "callbacksLast": false,
+      "shorthandFirst": false,
+      "shorthandLast": false,
+      "ignoreCase": true,
+      "noSortAlphabetically": false,
+      "reservedFirst": false
+    }],
+    "react/jsx-wrap-multilines": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "semi": ["error", "never"],
+    "sort-destructure-keys/sort-destructure-keys": ["error", {
+      "caseSensitive": false
+    }],
+    "sort-keys": ["error", "asc", {
+      "caseSensitive": false
+    }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "src"
+        ]
+      }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  },
+  "ignorePatterns": [ "build/*", "src/types/*" ]
+}

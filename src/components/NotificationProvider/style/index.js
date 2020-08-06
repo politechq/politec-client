@@ -1,0 +1,6 @@
+export { default as StyledIcon } from './StyledIcon'
+export { default as StyledInfo } from './StyledInfo'
+export { default as StyledMessage } from './StyledMessage'
+export { default as StyledNotification } from './StyledNotification'
+export { default as StyledNotificationList } from './StyledNotificationList'
+export { default as StyledTitle } from './StyledTitle'
